@@ -13,7 +13,7 @@ pipeline {
                 script {
                     // Execute the Python scripts in the correct order
                     try {
-                        bat 'python3 test.py'
+                        bat 'python test.py'
                     } catch (Exception e) {
                         echo "Failed to execute test.py: ${e}"
                         writeFile file: 'Report.txt', text: "Failed to execute test.py: ${e}"
