@@ -1,11 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage('Checkout'){
-         steps{
-           Checkout scm
-        }   
-        }
         stage('check python version'){
          steps{
            sh 'python3 --version'
