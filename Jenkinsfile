@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('check python version'){
          steps{
-           sh 'python3 --version'
+           sh 'python --version'
         }   
         }
         stage('Run Main.py')
@@ -12,7 +12,7 @@ pipeline{
             {
                 sh 'pwd'
                 sh 'ls -la'
-                sh 'python3 -m C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Run_python_program\\Main.py'
+                sh 'python Main.py'
             }
         }
     }
