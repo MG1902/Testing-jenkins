@@ -1,6 +1,6 @@
-with open('test.txt','r') as infile:
+with open('C:\ProgramData\Jenkins\.jenkins\workspace\Run_python_program\test.txt','r') as infile:
     fids = infile.readlines()
 
-with open('test1.txt','w') as outfile:
+with open('C:\ProgramData\Jenkins\.jenkins\workspace\Run_python_program\test1.txt','w') as outfile:
     for fid in fids:
         outfile.write(fid)
