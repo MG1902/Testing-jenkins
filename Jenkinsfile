@@ -1,27 +1,18 @@
-pipeline {
+pipeline{
     agent any
-    stages {
-        stage('Check Python Version') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'python3 --version'  // Linux/Mac
-                    } else {
-                        bat 'python --version'  // Windows
-                    }
-                }
-            }
+    stages{
+        stage('check python version'){
+         steps{
+           sh 'python3 --version'
+        }   
         }
-        stage('Run Main.py') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'python3 main.py'  // Linux/Mac
-                    } else {
-                        bat 'python main.py'  // Windows
-                    }
-                }
+        stage('Run Main.py')
+        {
+            steps
+            {
+                sh 'python3 Main.py'
             }
         }
     }
+    
 }
