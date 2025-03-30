@@ -10,8 +10,8 @@ pipeline{
         {
             steps
             {
-                sh "pwd"
-                sh "ls -la"
+                sh 'pwd'
+                sh 'ls -la'
                 sh 'python3 Main.py'
             }
         }
